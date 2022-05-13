@@ -1,5 +1,6 @@
 import React from 'react'
 import './landing.css';
+import './css/Home.css';
 
 
 import Card from '@mui/material/Card';
@@ -34,116 +35,119 @@ const Home = () => {
   </section>
 
 
-  
 
-  <div className='container-fluid'>
-    <h1>Our Rooms</h1>
-    <div className='row hidden-md-up'>
-    <div class="col-md-3">
-
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-    </Card>
-    
-    </div>
-
-    <div class="col-md-3">
-
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-    </Card>
-    
-    </div>
-
-    <div class="col-md-3">
-
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-    </Card>
-    
-    </div>
-    </div>    
-  </div>
-
-
-
-<div class="site-section bg-light">
+{/* <div class="site-section bg-light">
 <div class="containerO">
 <div class="row">
-<div class="col-md-6 mx-auto text-center mb-5 section-heading">
-<h2 class="mb-5">Our Rooms</h2>
+<div class="">
+<h2 style={{marginTop:20}}>Our Rooms</h2>
 </div>
 </div>
 <div class="row">
-<div class="col-md-6 col-lg-4 mb-5">
-<div class="hotel-room text-center">
-<a href="#" class="d-block mb-0 thumbnail">
-  <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js">
-    </script>
-   <img src="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp" alt="Image" class="img-fluid" data-pagespeed-url-hash="3036630142" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
-<div class="hotel-room-body">
-<h3 class="heading mb-0"><a href="#">Standard Room</a></h3>
-<strong class="price">$350.00 / per night</strong>
+
+<div style={{marginLeft:189}} class="col-md-3">
+
+<Card sx={{ maxWidth: 345 }}>
+  <CardMedia
+    component="img"
+    height="140"
+    image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
+    alt="green iguana"
+  />
+  <CardContent>
+    <Typography gutterBottom variant="h5" component="div">
+      Lizard
+    </Typography>
+    <Typography variant="body2" color="text.secondary">
+      Lizards are a widespread group of squamate reptiles, with over 6,000
+      species, ranging across all continents except Antarctica
+    </Typography>
+  </CardContent>
+</Card>
+
+</div>
+<div class="col-md-3">
+
+    <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+    </Card>
+    
+    </div>
+    <div class="col-md-3">
+
+    <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        height="140"
+        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
+        alt="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          Lizard
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+    </Card>
+    
+    </div>
+
+
+
 </div>
 </div>
+</div> */}
+
+{/* //about us */}
+
+
+<div style={{paddingTop: 90,paddingBottom:90}} class="about_area">
+  <h1>About us</h1>
+<div style={{paddingTop: 100,paddingBottom:100}} class="abtcontainer">
+<div class="row">
+<div class="col-xl-5 col-lg-5">
+<div class="about_info">
+<div class="section_title mb-20px">
+<span>About Us</span>
+<h3>A Luxuries Hotel <br/>
+with Nature</h3>
 </div>
-<div class="col-md-6 col-lg-4 mb-5">
-<div class="hotel-room text-center">
-<a href="#" class="d-block mb-0 thumbnail"><img src="https://preview.colorlib.com/theme/suites/images/ximg_3.jpg.pagespeed.ic.osxKtu1h5b.webp" alt="Image" class="img-fluid" data-pagespeed-url-hash="3331130063" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
-<div class="hotel-room-body">
-<h3 class="heading mb-0"><a href="#">Family Room</a></h3>
-<strong class="price">$400.00 / per night</strong>
+<p className='abttext'>Savour your penchant for finer comforts.
+   Partner with sheer luxury at Ceylon Grand,
+    as you attend a business event in the capital city.
+     Let the opulence of our meeting rooms and conference 
+     halls seep into flourishing work partnerships.
+      Raise a toast to all the success at our plush restaurants and taste
+       jubilance like never before. When you’ve enjoyed every bit of your Grand accomplishments,
+        retire to your room, and relish in the exquisite comforts that Colombo’s
+         most lavish business hotel has to offer.</p>
+<a href="#" class="line-button">Learn More</a>
 </div>
 </div>
+<div class="col-xl-7 col-lg-7">
+<div class="about_thumb d-flex">
+<div class="img_1">
+<img src="https://preview.colorlib.com/theme/montana/img/about/xabout_1.png.pagespeed.ic.LF5rkD9bee.webp"/>
 </div>
-<div class="col-md-6 col-lg-4 mb-5">
-<div class="hotel-room text-center">
-<a href="#" class="d-block mb-0 thumbnail"><img src="https://preview.colorlib.com/theme/suites/images/ximg_3.jpg.pagespeed.ic.osxKtu1h5b.webp" alt="Image" class="img-fluid" data-pagespeed-url-hash="3625629984" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
-<div class="hotel-room-body">
-<h3 class="heading mb-0"><a href="#">Single Room</a></h3>
-<strong class="price">$255.00 / per night</strong>
+<div class="abtimg_2">
+<img src="https://preview.colorlib.com/theme/montana/img/about/xabout_2.png.pagespeed.ic.Iswjjsyaxg.webp" alt="" data-pagespeed-url-hash="965061259" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
 </div>
 </div>
 </div>
@@ -151,6 +155,66 @@ const Home = () => {
 </div>
 </div>
 
+{/* ongoing offors */}
+<div class="ofoffers_area">
+<div class="ofcontainer">
+<div class="ofrow">
+<div class="ofcol-xl-12">
+<div class="section_title oftext-center ofmb-100">
+<span>Our Offers</span>
+<h3>Ongoing Offers</h3>
+</div>
+</div>
+</div>
+<div class="ofrow">
+<div class="col-xl-4 col-md-4">
+<div class="single_offers">
+<div class="about_thumb">
+<img src="https://preview.colorlib.com/theme/montana/img/offers/x1.png.pagespeed.ic.CPgqevbSyX.webp" alt="" data-pagespeed-url-hash="900117794" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</div>
+<h3 className='offers_area'>Up to 35% savings on Club <br/>
+rooms and Suites</h3>
+<ul>
+<li>Luxaries condition</li>
+<li>3 Adults &amp; 2 Children size</li>
+<li>Sea view side</li>
+</ul>
+<a href="#" class="book_now">book now</a>
+</div>
+</div>
+<div class="col-xl-4 col-md-4">
+<div class="single_offers">
+<div class="about_thumb">
+<img src="https://preview.colorlib.com/theme/montana/img/offers/x2.png.pagespeed.ic.MbYDoANTJ3.webp" alt="" data-pagespeed-url-hash="1194617715" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</div>
+<h3>Up to 35% savings on Club <br/>
+rooms and Suites</h3>
+<ul>
+<li>Luxaries condition</li>
+<li>3 Adults &amp; 2 Children size</li>
+<li>Sea view side</li>
+</ul>
+<a href="#" class="book_now">book now</a>
+</div>
+</div>
+<div class="col-xl-4 col-md-4">
+<div class="single_offers">
+<div class="about_thumb">
+<img src="https://preview.colorlib.com/theme/montana/img/offers/x3.png.pagespeed.ic.Y_ffhAZTDD.webp" alt="" data-pagespeed-url-hash="1489117636" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</div>
+<h3>Up to 35% savings on Club <br/>
+rooms and Suites</h3>
+<ul >
+<li>Luxaries condition</li>
+<li>3 Adults &amp; 2 Children size</li>
+<li>Sea view side</li>
+</ul>
+<a href="#" class="book_now">book now</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
   

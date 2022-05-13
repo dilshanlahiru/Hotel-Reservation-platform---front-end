@@ -1,0 +1,99 @@
+.abtcontainer{
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.abtrow{
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
+}
+.abtcol-xl-5 .col-lg-5{
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.abtimg_2{
+    margin-top: 40px;
+    margin-left: 10px;
+}
+
+.mb-20px {
+    margin-bottom: 20px;
+}
+.abttext{
+    text-align: left;
+  }
+
+
+
+  
+  /* offers area */
+  .ofoffers_area {
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    line-height: 1.5;
+    text-align: left;
+}
+.ofcontainer {
+    max-width: 1140px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.ofrow{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.ofcol-xl-12{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.oftext-center{
+    text-align: center!important;
+} 
+.ofmb-100{
+    margin-bottom: 100px;
+}
+.col-md-4 .col-xl-4{
+    /* position: relative; */
+    width: 100%;
+    /* min-height: 1px; */
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.ofoffers_area .single_offers .about_thumb {
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.img {
+    vertical-align: middle;
+    border-style: none;
+} 
+ .offers_area .single_offers .about_thumb img {
+    width: 100%;
+    transform: scale(1);
+    -webkit-transition: .3s;
+    transition: .3s;
+} 
+.ofoffers_area .single_offers h3 {
+    font-family: 'Raleway',sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #1f1f1f;
+    margin-top: 32px;
+}
