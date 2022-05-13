@@ -379,3 +379,9 @@ button:hover::after,
   margin-bottom: 1.875rem;
 }
 
+.ourRooms{
+  margin-left: 16rem;
+  margin-top: 20px;
+  margin-right: 20px;
+ 
+}

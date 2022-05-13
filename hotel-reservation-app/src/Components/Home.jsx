@@ -156,7 +156,7 @@ with Nature</h3>
 </div>
 
 {/* ongoing offors */}
-<div class="ofoffers_area">
+<div class="ofoffers_area bg-light">
 <div class="ofcontainer">
 <div class="ofrow">
 <div class="ofcol-xl-12">
@@ -216,6 +216,90 @@ rooms and Suites</h3>
 </div>
 </div>
 
+{/* gallary */}
+
+<div style={{paddingTop: 90,paddingBottom:90}} class="about_area">
+  <h1>About us</h1>
+<div style={{paddingTop: 100,paddingBottom:100}} class="abtcontainer">
+<div class="row">
+<div class="col-xl-5 col-lg-5">
+<div class="about_info">
+<div class="section_title mb-20px">
+{/* <span>About Us</span> */}
+<h3>We Serve Fresh and<br/>
+Delicious Food</h3>
+</div>
+<p className='abttext'>Savour your penchant for finer comforts.
+   Partner with sheer luxury at Ceylon Grand,
+    as you attend a business event in the capital city.
+     Let the opulence of our meeting rooms and conference 
+     halls seep into flourishing work partnerships.
+      Raise a toast to all the success at our plush restaurants and taste
+       jubilance like never before. When you’ve enjoyed every bit of your Grand accomplishments,
+        retire to your room, and relish in the exquisite comforts that Colombo’s
+         most lavish business hotel has to offer.</p>
+<a href="#" class="line-button">Learn More</a>
+</div>
+</div>
+<div class="col-xl-7 col-lg-7">
+<div class="about_thumb d-flex">
+<div class="img_1">
+<img src="https://preview.colorlib.com/theme/montana/img/about/x1.png.pagespeed.ic.ytFzk1qg9A.webp"/>
+</div>
+<div class="abtimg_2">
+<img src="https://preview.colorlib.com/theme/montana/img/about/x2.png.pagespeed.ic.TMQb44M-no.webp" alt="" data-pagespeed-url-hash="965061259" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+{/* footer */}
+
+<footer class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row">
+<div class="col-xl-3 col-md-6 col-lg-3">
+<div class="footer_widget">
+<h3 class="footer_title">
+address
+</h3>
+<p class="footer_text"> 200, Green road, Mongla, <br/>
+New Yor City USA</p>
+<a href="#" class="line-button">Get Direction</a>
+</div>
+</div>
+<div class="col-xl-3 col-md-6 col-lg-3">
+<div class="footer_widget">
+<h3 class="footer_title">
+Reservation
+</h3>
+<p class="footer_text">+10 367 267 2678 <br/>
+reservation@montana.com</p>
+</div>
+</div>
+<div class="col-xl-2 col-md-6 col-lg-2">
+<div class="footer_widget">
+<h3 class="footer_title">
+Navigation
+</h3>
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#">Rooms</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">News</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+</footer>
 
   
     </div>
