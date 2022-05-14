@@ -1,4 +1,5 @@
-{/* <div class="col-md-6 col-lg-4 mb-5">
+{
+  /* <div class="col-md-6 col-lg-4 mb-5">
 <div class="hotel-room text-center">
 <a href="#" class="d-block mb-0 thumbnail">
   <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js">
@@ -21,8 +22,10 @@
 </div>
 </div>
 
-*/}
-<div class="col-md-6 col-lg-4 mb-5">
+*/
+}
+{
+  /* <div class="col-md-6 col-lg-4 mb-5">
 <div class="hotel-room text-center">
 <a href="#" class="d-block mb-0 thumbnail"><img src="https://preview.colorlib.com/theme/suites/images/ximg_3.jpg.pagespeed.ic.osxKtu1h5b.webp" alt="Image" class="img-fluid" data-pagespeed-url-hash="3625629984" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"/></a>
 <div class="hotel-room-body">
@@ -30,4 +33,5 @@
 <strong class="price">$255.00 / per night</strong>
 </div>
 </div>
-</div> 
+</div>  */
+}
