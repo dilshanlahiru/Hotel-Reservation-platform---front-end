@@ -26,7 +26,7 @@ const Home = () => {
               one-stop-shop for spending, saving, budgeting, investing, and much
               more.
             </p>
-            <a href="#" className="button">
+            <a href="/booking-rooms" className="button">
               Book
             </a>
           </div>
