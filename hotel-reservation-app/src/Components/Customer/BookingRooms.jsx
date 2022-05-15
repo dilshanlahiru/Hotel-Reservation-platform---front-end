@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
 
+// import DatePicker from "react-datetime";
+// import DatePicker from "react-datepicker";
+// import moment from "moment";
+
 function BookingRooms() {
   const [aDate, setADate] = useState();
   const [dDate, setDDate] = useState();
@@ -21,6 +25,7 @@ function BookingRooms() {
     //   navigate("/");
     // });
   };
+  console.log(res);
 
   return (
     <div className="container">
@@ -102,6 +107,12 @@ function BookingRooms() {
             <button type="submit" className="btn btn-primary">
               check
             </button>
+
+            {/* <DatePicker
+              selected={new Date()}
+              // onChange={(date) => handleDateChange(date, field)}
+              minDate={moment().toDate()}
+            /> */}
           </form>
         </div>
       </div>
