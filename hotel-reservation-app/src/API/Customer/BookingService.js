@@ -3,13 +3,19 @@ import axios from "axios";
 const API_URL = "http://localhost:8080";
 
 class BookingService {
-  checkAvaliable(data) {
-    return axios.post(`${API_URL}/user/`, data);
+  booking(data) {
+    return axios.post(`${API_URL}/book/`, data);
   }
 
-  // viewAllRoom() {
-  //   return axios.get(`${API_URL}/room/`);
-  // }
+  getAvaliable(aDate, dDate, category, size) {
+    return axios.get(
+      `${API_URL}/book/checkAvailability/${aDate}/${dDate}/${category}/${size}`
+    );
+  }
+
+  viewAllBooking(id) {
+    return axios.get(`${API_URL}/book/booking/${id}`);
+  }
 
   // getRoomByID(id) {
   //   return axios.get(`${API_URL}/room/${id}`);

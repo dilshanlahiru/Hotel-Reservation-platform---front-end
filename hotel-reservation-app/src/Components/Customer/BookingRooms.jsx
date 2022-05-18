@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
+import BookingService from "../../API/Customer/BookingService";
 
 // import DatePicker from "react-datetime";
 // import DatePicker from "react-datepicker";
@@ -14,18 +15,43 @@ function BookingRooms() {
   const navigate = useNavigate();
   const { id } = useParams();
 
+  const [d, setD] = useState();
+
   const checkAvaliable = (e) => {
     e.preventDefault();
 
-    const submitData = { aDate, dDate, category, size };
+    if (id) {
+      BookingService.getAvaliable(aDate, dDate, category, size).then((res) => {
+        console.log(res.data);
+        setD(res.data);
+      });
 
-    console.log(submitData);
-    // RegistrationService.addUser(submitData).then((res) => {
-    //   console.log(res);
-    //   navigate("/");
-    // });
+      var customerId = id;
+      var arrivalDate = aDate;
+      var departureDate = dDate;
+
+      const bookingData = {
+        customerId,
+        arrivalDate,
+        departureDate,
+        category,
+        size,
+      };
+
+      BookingService.booking(bookingData).then((res) => {
+        console.log(res);
+      });
+    } else {
+      const submitData = { aDate, dDate, category, size };
+
+      BookingService.getAvaliable(aDate, dDate, category, size).then((res) => {
+        console.log(res.data);
+        setD(res.data);
+        navigate("/login");
+      });
+    }
   };
-  console.log(res);
+  //   console.log(res);
 
   return (
     <div className="container">

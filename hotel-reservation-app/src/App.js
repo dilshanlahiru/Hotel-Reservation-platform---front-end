@@ -7,6 +7,8 @@ import AddRooms from "./Components/Admin/AddRooms";
 import ViewRooms from "./Components/Admin/ViewRooms";
 import CustomerRegister from "./Components/Customer/CustomerRegister";
 import BookingRooms from "./Components/Customer/BookingRooms";
+import CustomerLogin from "./Components/Customer/CustomerLogin";
+import Profile from "./Components/Customer/Profile";
 //import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -20,7 +22,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} exact />
           <Route path="/registaion" element={<CustomerRegister />} />
+          <Route path="/login" element={<CustomerLogin />} />
+          <Route path="/profile/:id" element={<Profile />} />
           <Route path="/booking-rooms" element={<BookingRooms />} />
+          <Route path="/booking-rooms/:id" element={<BookingRooms />} />
           <Route path="/admin-rooms/add" element={<AddRooms />} />
           <Route path="/admin-rooms/view" element={<ViewRooms />} />
           <Route path="/admin-rooms/:id" element={<AddRooms />} />

@@ -7,6 +7,13 @@ class RegistrationService {
     return axios.post(`${API_URL}/user/`, user);
   }
 
+  // getLogin(email, password) {
+  //   return axios.get(`${API_URL}/login/${email}/${password}`);
+  // }
+
+  login(user) {
+    return axios.post(`${API_URL}/user/Login`, user);
+  }
   // viewAllRoom() {
   //   return axios.get(`${API_URL}/room/`);
   // }
