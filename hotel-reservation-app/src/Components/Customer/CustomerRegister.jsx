@@ -7,6 +7,7 @@ function CustomerRegister() {
   const [phoneNo, setPhoneNo] = useState();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [resId, setResId] = useState("");
   const navigate = useNavigate();
 
   const clickSubmit = (e) => {
@@ -17,7 +18,9 @@ function CustomerRegister() {
     console.log(submitData);
     RegistrationService.addUser(submitData).then((res) => {
       console.log(res);
-      navigate("/");
+      setResId(res.data.userId);
+      navigate(`/profile/${res.data.userId}`);
+      alert(res.data.userId);
     });
   };
 
@@ -30,7 +33,7 @@ function CustomerRegister() {
       <div className="card col-md-7 offset-md-3 offset-md-3">
         <div className="card-body">
           <div>
-            <h2>Registation</h2>
+            <h1>Registation</h1>
           </div>
           <br />
           <br />

@@ -17,6 +17,9 @@ class BookingService {
     return axios.get(`${API_URL}/book/booking/${id}`);
   }
 
+  deleteBooking(id) {
+    return axios.delete(`${API_URL}/book/${id}`);
+  }
   // getRoomByID(id) {
   //   return axios.get(`${API_URL}/room/${id}`);
   // }

@@ -1,19 +1,15 @@
 import React from "react";
 import "./landing.css";
 import "./css/Home.css";
-
-// import Card from '@mui/material/Card';
-// import CardActions from '@mui/material/CardActions';
-// import CardContent from '@mui/material/CardContent';
-// import CardMedia from '@mui/material/CardMedia';
-// import Button from '@mui/material/Button';
-// import Typography from '@mui/material/Typography';
-
-// import CssBaseline from '@mui/material/CssBaseline';
-// import Box from '@mui/material/Box';
-// import Container from '@mui/material/Container';
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const clickBooking = () => {
+    navigate("/booking-rooms");
+  };
+
   return (
     <div>
       <section className="hero">
@@ -26,91 +22,16 @@ const Home = () => {
               one-stop-shop for spending, saving, budgeting, investing, and much
               more.
             </p>
-            <a href="/booking-rooms" className="button">
+            <button
+              href="/booking-rooms"
+              className="btn btn-primary"
+              onClick={clickBooking}
+            >
               Book
-            </a>
+            </button>
           </div>
         </div>
       </section>
-
-      {/* <div className="site-section bg-light">
-<div className="containerO">
-<div className="row">
-<div className="">
-<h2 style={{marginTop:20}}>Our Rooms</h2>
-</div>
-</div>
-<div className="row">
-
-<div style={{marginLeft:189}} className="col-md-3">
-
-<Card sx={{ maxWidth: 345 }}>
-  <CardMedia
-    component="img"
-    height="140"
-    image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-    alt="green iguana"
-  />
-  <CardContent>
-    <Typography gutterBottom variant="h5" component="div">
-      Lizard
-    </Typography>
-    <Typography variant="body2" color="text.secondary">
-      Lizards are a widespread group of squamate reptiles, with over 6,000
-      species, ranging across all continents except Antarctica
-    </Typography>
-  </CardContent>
-</Card>
-
-</div>
-<div className="col-md-3">
-
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-    </Card>
-    
-    </div>
-    <div className="col-md-3">
-
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        height="140"
-        image="https://preview.colorlib.com/theme/suites/images/ximg_1.jpg.pagespeed.ic.1H3zXpM6hU.webp"
-        alt="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-    </Card>
-    
-    </div>
-
-
-
-</div>
-</div>
-</div> */}
 
       {/* //about us */}
 
@@ -352,6 +273,19 @@ const Home = () => {
                       <a href="#">News</a>
                     </li>
                   </ul>
+                </div>
+              </div>
+              <div className="col-xl-2 col-md-6 col-lg-2">
+                <div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.7984671121426!2d79.97075581409538!3d6.914682820412032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae256db1a6771c5%3A0x2c63e344ab9a7536!2sSri%20Lanka%20Institute%20of%20Information%20Technology!5e0!3m2!1sen!2slk!4v1652956546328!5m2!1sen!2slk"
+                    width="400"
+                    height="300"
+                    style={{ border: 0 }}
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
                 </div>
               </div>
             </div>

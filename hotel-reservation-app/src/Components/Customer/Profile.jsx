@@ -22,22 +22,29 @@ function Profile() {
     alert(id);
   };
 
-  const deleteClicked = (id) => {
-    alert(id);
-    // RoomService.deleteRoom(id).then((res) => {
-    //   setRoomList(roomList.filter((roomList) => roomList.id !== id));
-    // });
+  const deleteClicked = (bookingId) => {
+    BookingService.deleteBooking(bookingId).then((res) => {
+      setBookingList(
+        bookingList.filter((bookingList) => bookingList.bookingId !== bookingId)
+      );
+    });
+    alert(bookingId);
   };
 
   const clickAddBooking = () => {
     navigate(`/booking-rooms/${id}`);
   };
+  const clickAddBookTaxi = () => {
+    navigate("/booking-taxi");
+  };
 
   return (
     <div className="container">
+      <br />
+      <br />
       <div className="card-body">
         <div>
-          <h2>View Bookings</h2>
+          <h1>View Bookings</h1>
         </div>
 
         <br />
@@ -84,8 +91,15 @@ function Profile() {
           </tbody>
         </table>
 
-        <button className="btn btn-primary" onClick={clickAddBooking}>
+        <button
+          className="btn btn-primary"
+          onClick={clickAddBooking}
+          style={{ marginRight: 10 }}
+        >
           Book Room
+        </button>
+        <button className="btn btn-primary" onClick={clickAddBookTaxi}>
+          Book Taxi
         </button>
       </div>
     </div>

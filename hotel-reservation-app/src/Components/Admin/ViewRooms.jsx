@@ -33,9 +33,11 @@ function ViewRooms() {
 
   return (
     <div className="container">
+      <br />
+      <br />
       <div className="card-body">
         <div>
-          <h2>View Rooms</h2>
+          <h1>View Rooms</h1>
         </div>
         <div className="container">
           <input
@@ -53,6 +55,8 @@ function ViewRooms() {
             }}
           />
         </div>
+        <br />
+        <br />
         <br />
         <table class="table table-hover">
           <thead>
@@ -134,9 +138,11 @@ function ViewRooms() {
             )) */}
           </tbody>
         </table>
+        <br />
+        <br />
 
         <button className="btn btn-primary" onClick={clickAddRoom}>
-          add Room
+          Add Room
         </button>
       </div>
     </div>

@@ -27,9 +27,9 @@ function AddRooms() {
 
   const title = () => {
     if (id) {
-      return <h2>Update Rooms</h2>;
+      return <h1>Update Rooms</h1>;
     } else {
-      return <h2>Add Rooms</h2>;
+      return <h1>Add Rooms</h1>;
     }
   };
 
@@ -65,6 +65,8 @@ function AddRooms() {
       <div className="card col-md-6 offset-md-3 offset-md-3">
         <div className="card-body">
           <div>{title()}</div>
+          <br />
+          <br />
           <form onSubmit={clickSubmit}>
             <div className="row">
               <div className="col">
@@ -112,7 +114,7 @@ function AddRooms() {
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
                 // defaultValue="null"
-                placeholder="enter"
+                placeholder="enter description"
               ></textarea>
             </div>
             <br />

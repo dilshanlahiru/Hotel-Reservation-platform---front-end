@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
 import BookingService from "../../API/Customer/BookingService";
+import emailjs from "emailjs-com";
 
 // import DatePicker from "react-datetime";
 // import DatePicker from "react-datepicker";
@@ -12,67 +13,111 @@ function BookingRooms() {
   const [dDate, setDDate] = useState();
   const [category, setCategory] = useState("");
   const [size, setSize] = useState("");
+  const [amount, setAmount] = useState(0);
   const navigate = useNavigate();
   const { id } = useParams();
 
   const [d, setD] = useState();
+  const [email, setEmail] = useState("");
 
-  const checkAvaliable = (e) => {
+  const checkAvaliable = async (e) => {
     e.preventDefault();
 
     if (id) {
-      BookingService.getAvaliable(aDate, dDate, category, size).then((res) => {
-        console.log(res.data);
-        setD(res.data);
-      });
+      setPrice();
+      console.log(amount);
+      await BookingService.getAvaliable(aDate, dDate, category, size).then(
+        (res) => {
+          console.log(res.data);
+          setD(res.data);
 
-      var customerId = id;
-      var arrivalDate = aDate;
-      var departureDate = dDate;
+          if (d > 0) {
+            var customerId = id;
+            var arrivalDate = aDate;
+            var departureDate = dDate;
 
-      const bookingData = {
-        customerId,
-        arrivalDate,
-        departureDate,
-        category,
-        size,
-      };
+            const bookingData = {
+              customerId,
+              arrivalDate,
+              departureDate,
+              category,
+              size,
+            };
 
-      BookingService.booking(bookingData).then((res) => {
-        console.log(res);
-      });
+            BookingService.booking(bookingData).then((res) => {
+              console.log(res.data.bookingId);
+
+              emailjs
+                .sendForm(
+                  "service_te9rdrw",
+                  "template_t7wgl5z",
+                  e.target,
+                  "user_82jopq3UFMlV5szQ1YBg1"
+                )
+                .then((res) => {
+                  console.log(res);
+                });
+
+              navigate(`/booking-rooms/${id}/${res.data.bookingId}/${amount}`);
+            });
+          } else if (d <= 0) {
+            alert("sorry, All this types of rooms reserved in this day");
+          }
+        }
+      );
     } else {
       const submitData = { aDate, dDate, category, size };
 
-      BookingService.getAvaliable(aDate, dDate, category, size).then((res) => {
-        console.log(res.data);
-        setD(res.data);
-        navigate("/login");
-      });
+      await BookingService.getAvaliable(aDate, dDate, category, size).then(
+        (res) => {
+          console.log(res.data);
+          setD(res.data);
+          if (d > 0) {
+            navigate("/login");
+          } else if (d <= 0) {
+            alert("sorryyyy");
+          }
+        }
+      );
     }
   };
-  //   console.log(res);
+
+  const setPrice = () => {
+    if (category === "normal" && size === "2-person") {
+      setAmount(2000);
+    } else if (category === "normal" && size === "5-person") {
+      setAmount(4000);
+    } else if (category === "luxury" && size === "2-person") {
+      setAmount(5000);
+    } else if (category === "luxury" && size === "5-person") {
+      setAmount(10000);
+    }
+  };
 
   return (
     <div className="container">
       <br />
       <br />
       <br />
-      <br />
       <div className="card col-md-6 offset-md-3 offset-md-3">
         <div className="card-body">
-          <div>Booking</div>
+          <div>
+            <h2>Room Reservation Form</h2>
+          </div>
+          <br />
+          <br />
           <form onSubmit={checkAvaliable}>
             <div className="row">
               <div className="col">
                 <div className="form-group">
-                  <label>A Date</label>
+                  <label>Arrival Date</label>
                   <input
                     type="date"
                     className="form-control"
                     id="exampleFormControlSelect1"
                     onChange={(e) => setADate(e.target.value)}
                     value={aDate}
+                    name="Arrival_Date"
                   ></input>
                 </div>
               </div>
@@ -82,13 +127,14 @@ function BookingRooms() {
               <br />
               <div className="col">
                 <div className="form-group">
-                  <label>D Date</label>
+                  <label>Departure Date</label>
                   <input
                     type="date"
                     className="form-control"
                     id="exampleFormControlSelect1"
                     onChange={(e) => setDDate(e.target.value)}
                     value={dDate}
+                    name="Departure_Date"
                   ></input>
                 </div>
               </div>
@@ -103,6 +149,7 @@ function BookingRooms() {
                     // onChange={selectCategory}
                     onChange={(e) => setCategory(e.target.value)}
                     value={category}
+                    name="Room_Category"
                   >
                     <option>Select Category </option>
                     <option value="normal">normal</option>
@@ -119,12 +166,29 @@ function BookingRooms() {
                     id="exampleFormControlSelect1"
                     onChange={(e) => setSize(e.target.value)}
                     value={size}
+                    name="Room_Size"
                   >
                     <option>Select Size</option>
                     <option value="2-person">2-person</option>
                     <option value="5-person">5-person</option>
                   </select>
                 </div>
+              </div>
+            </div>
+            <br />
+            <br />
+            <div className="form-group row">
+              <label className="col-sm-2 col-form-label">Email</label>
+              <div className="col-sm-10">
+                <input
+                  type="email"
+                  className="form-control"
+                  id="inputEmail3"
+                  placeholder="Email"
+                  value={email}
+                  name="Email"
+                  onChange={(e) => setEmail(e.target.value)}
+                ></input>
               </div>
             </div>
 
