@@ -7,7 +7,7 @@ const Home = () => {
   const navigate = useNavigate();
 
   const clickBooking = () => {
-    navigate("/booking-rooms");
+    navigate("/view-rooms");
   };
 
   return (

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import RegistrationService from "../../API/Customer/RegistrationService";
+import Swal from "sweetalert2";
 
 function CustomerRegister() {
   const [userName, setUserName] = useState("");
@@ -20,7 +21,7 @@ function CustomerRegister() {
       console.log(res);
       setResId(res.data.userId);
       navigate(`/profile/${res.data.userId}`);
-      alert(res.data.userId);
+      Swal.fire(" succesfully registaion");
     });
   };
 
@@ -48,6 +49,9 @@ function CustomerRegister() {
                   placeholder="name"
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
+                  required="required"
+                  minlength="4"
+                  title="please enter at least 4 characters"
                 ></input>
               </div>
             </div>
@@ -61,6 +65,9 @@ function CustomerRegister() {
                   placeholder="077123456"
                   value={phoneNo}
                   onChange={(e) => setPhoneNo(e.target.value)}
+                  required="required"
+                  minlength="10"
+                  title="please enter valid mobile number"
                 ></input>
               </div>
             </div>
@@ -75,6 +82,7 @@ function CustomerRegister() {
                   placeholder="Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  required="required"
                 ></input>
               </div>
             </div>
@@ -90,6 +98,9 @@ function CustomerRegister() {
                   placeholder="Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  required="required"
+                  minlength="4"
+                  title="please enter at least 4 characters"
                 ></input>
               </div>
             </div>

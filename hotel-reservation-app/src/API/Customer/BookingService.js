@@ -20,16 +20,9 @@ class BookingService {
   deleteBooking(id) {
     return axios.delete(`${API_URL}/book/${id}`);
   }
-  // getRoomByID(id) {
-  //   return axios.get(`${API_URL}/room/${id}`);
-  // }
 
-  // updateRoom(id, room) {
-  //   return axios.put(`${API_URL}/room/${id}`, room);
-  // }
-
-  // deleteRoom(id) {
-  //   return axios.delete(`${API_URL}/room/${id}`);
-  // }
+  payment(data) {
+    return axios.post(`${API_URL}/payment/`, data);
+  }
 }
 export default new BookingService();

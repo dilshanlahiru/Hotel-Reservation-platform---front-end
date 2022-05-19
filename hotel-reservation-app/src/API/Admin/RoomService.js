@@ -22,5 +22,9 @@ class RoomService {
   deleteRoom(id) {
     return axios.delete(`${API_URL}/room/${id}`);
   }
+
+  viewAllBooking() {
+    return axios.get(`${API_URL}/book/`);
+  }
 }
 export default new RoomService();

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
 import StripeCheckout from "react-stripe-checkout";
+import BookingService from "../../API/Customer/BookingService";
 
 export default function Payment() {
   const navigate = useNavigate();
@@ -9,12 +10,22 @@ export default function Payment() {
   const { id } = useParams();
   const { amount } = useParams();
 
-  const clickCard = () => {
-    navigate(`/booking-rooms/${id}/${amount}/card`);
-  };
+  // const clickCard = () => {
+  //   navigate(`/booking-rooms/${id}/${amount}/card`);
+  // };
 
   const clickProfile = () => {
     navigate(`/profile/${cusId}`);
+  };
+
+  const payment = () => {
+    var bookingId = id;
+    var price = amount;
+
+    const submitDat = { bookingId, price };
+    BookingService.payment(submitDat).then((res) => {
+      console.log(res);
+    });
   };
   return (
     <div className="container">
@@ -38,13 +49,7 @@ export default function Payment() {
               </label>
             </div>
             <br />
-            <button
-              className="btn btn-primary"
-              style={{ marginRight: 10 }}
-              onClick={clickCard}
-            >
-              Cash
-            </button>
+
             <StripeCheckout
               token=""
               name="Card Details"
@@ -53,7 +58,11 @@ export default function Payment() {
 
               stripeKey="pk_test_51KxR3MIC2E0K0mYHN4a2mYK3zETDNxJVZPhLZ19tDCGfHzSzOtu9u0dJFz28ZyZe3AMh0nBlySOwWIHwbY0LUJRM00P1aj1dUp"
             >
-              <button className="btn btn-primary" style={{ marginRight: 10 }}>
+              <button
+                className="btn btn-primary"
+                style={{ marginRight: 10 }}
+                onClick={payment}
+              >
                 Pay Now
               </button>
             </StripeCheckout>

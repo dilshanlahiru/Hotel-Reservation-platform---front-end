@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import RoomService from "../../API/Admin/RoomService";
+import Swal from "sweetalert2";
 
 function ViewRooms() {
   const navigate = useNavigate();
@@ -17,11 +18,11 @@ function ViewRooms() {
   const updateClicked = (id) => {
     console.log(id);
     navigate(`/admin-rooms/${id}`);
-    alert(id);
   };
 
   const deleteClicked = (id) => {
-    alert(id);
+    // alert(id);
+    Swal.fire(" succesfully deleted");
     RoomService.deleteRoom(id).then((res) => {
       setRoomList(roomList.filter((roomList) => roomList.id !== id));
     });
@@ -29,6 +30,9 @@ function ViewRooms() {
 
   const clickAddRoom = () => {
     navigate("/admin-rooms/add");
+  };
+  const clickViewBooking = () => {
+    navigate("/admin-booking/view");
   };
 
   return (
@@ -57,7 +61,7 @@ function ViewRooms() {
         </div>
         <br />
         <br />
-        <br />
+
         <table class="table table-hover">
           <thead>
             <tr>
@@ -108,41 +112,20 @@ function ViewRooms() {
                   </td>
                 </tr>
               ))}
-
-            {/* roomList.map((r) => (
-              <tr key={r.id}>
-                <td>{r.id}</td>
-                <td>{r.category}</td>
-                <td>{r.size}</td>
-                <td>{r.description}</td>
-                <td>
-                  <button
-                    className="btn btn-success"
-                    onClick={() => {
-                      updateClicked(r.id);
-                    }}
-                    style={{ marginRight: 10 }}
-                  >
-                    update
-                  </button>
-                  <button
-                    className="btn btn-warning"
-                    onClick={() => {
-                      deleteClicked(r.id);
-                    }}
-                  >
-                    delete
-                  </button>
-                </td>
-              </tr>
-            )) */}
           </tbody>
         </table>
         <br />
         <br />
 
-        <button className="btn btn-primary" onClick={clickAddRoom}>
+        <button
+          className="btn btn-primary"
+          onClick={clickAddRoom}
+          style={{ marginRight: 10 }}
+        >
           Add Room
+        </button>
+        <button className="btn btn-primary" onClick={clickViewBooking}>
+          View Booking Details
         </button>
       </div>
     </div>

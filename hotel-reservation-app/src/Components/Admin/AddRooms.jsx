@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import RoomService from "../../API/Admin/RoomService.js";
 import { useParams } from "react-router";
+import Swal from "sweetalert2";
 
 function AddRooms() {
   const [category, setCategory] = useState("");
@@ -47,10 +48,11 @@ function AddRooms() {
           navigate("/admin-rooms/view");
         }
       });
-      alert("successful");
+      Swal.fire(" succesfully updated");
     } else {
       RoomService.addRoom(submitRoom).then((res) => {
         console.log(res);
+        Swal.fire(" succesfully added");
         navigate("/admin-rooms/view");
       });
     }
@@ -78,6 +80,7 @@ function AddRooms() {
                     // onChange={selectCategory}
                     onChange={(e) => setCategory(e.target.value)}
                     value={category}
+                    required="required"
                   >
                     <option>Select Category </option>
                     <option value="normal">normal</option>
@@ -97,6 +100,7 @@ function AddRooms() {
                     id="exampleFormControlSelect1"
                     onChange={(e) => setSize(e.target.value)}
                     value={size}
+                    required="required"
                   >
                     <option>Select Size</option>
                     <option value="2-person">2-person</option>
@@ -115,6 +119,7 @@ function AddRooms() {
                 onChange={(e) => setDescription(e.target.value)}
                 // defaultValue="null"
                 placeholder="enter description"
+                required="required"
               ></textarea>
             </div>
             <br />

@@ -12,6 +12,8 @@ import Profile from "./Components/Customer/Profile";
 import Payment from "./Components/Customer/Payment";
 import CardPaymentService from "./Components/ThredPartyServices/CardPaymentService";
 import TaxiService from "./Components/ThredPartyServices/TaxiService";
+import CustomerViewRooms from "./Components/Customer/CustomerViewRooms";
+import ViewBooking from "./Components/Admin/ViewBooking";
 //import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
@@ -28,6 +30,7 @@ function App() {
           <Route path="/login" element={<CustomerLogin />} />
           <Route path="/profile/:id" element={<Profile />} />
           <Route path="/booking-rooms" element={<BookingRooms />} />
+          <Route path="/view-rooms" element={<CustomerViewRooms />} />
           <Route path="/booking-rooms/:id" element={<BookingRooms />} />
           <Route path="/booking-taxi" element={<TaxiService />} />
           <Route
@@ -41,6 +44,7 @@ function App() {
           <Route path="/admin-rooms/add" element={<AddRooms />} />
           <Route path="/admin-rooms/view" element={<ViewRooms />} />
           <Route path="/admin-rooms/:id" element={<AddRooms />} />
+          <Route path="/admin-booking/view" element={<ViewBooking />} />
         </Routes>
       </React.Fragment>
     </div>

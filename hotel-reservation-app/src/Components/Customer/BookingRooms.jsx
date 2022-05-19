@@ -3,10 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router";
 import BookingService from "../../API/Customer/BookingService";
 import emailjs from "emailjs-com";
-
-// import DatePicker from "react-datetime";
-// import DatePicker from "react-datepicker";
-// import moment from "moment";
+import Swal from "sweetalert2";
 
 function BookingRooms() {
   const [aDate, setADate] = useState();
@@ -61,7 +58,13 @@ function BookingRooms() {
               navigate(`/booking-rooms/${id}/${res.data.bookingId}/${amount}`);
             });
           } else if (d <= 0) {
-            alert("sorry, All this types of rooms reserved in this day");
+            // alert("sorry, All this types of rooms reserved in this day");
+
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "sorry, All this types of rooms reserved in this day!",
+            });
           }
         }
       );
@@ -75,7 +78,7 @@ function BookingRooms() {
           if (d > 0) {
             navigate("/login");
           } else if (d <= 0) {
-            alert("sorryyyy");
+            alert("sorry, All this types of rooms reserved in this day");
           }
         }
       );
@@ -118,6 +121,7 @@ function BookingRooms() {
                     onChange={(e) => setADate(e.target.value)}
                     value={aDate}
                     name="Arrival_Date"
+                    required="required"
                   ></input>
                 </div>
               </div>
@@ -135,6 +139,7 @@ function BookingRooms() {
                     onChange={(e) => setDDate(e.target.value)}
                     value={dDate}
                     name="Departure_Date"
+                    required="required"
                   ></input>
                 </div>
               </div>
@@ -150,6 +155,7 @@ function BookingRooms() {
                     onChange={(e) => setCategory(e.target.value)}
                     value={category}
                     name="Room_Category"
+                    required="required"
                   >
                     <option>Select Category </option>
                     <option value="normal">normal</option>
@@ -167,6 +173,7 @@ function BookingRooms() {
                     onChange={(e) => setSize(e.target.value)}
                     value={size}
                     name="Room_Size"
+                    required="required"
                   >
                     <option>Select Size</option>
                     <option value="2-person">2-person</option>
