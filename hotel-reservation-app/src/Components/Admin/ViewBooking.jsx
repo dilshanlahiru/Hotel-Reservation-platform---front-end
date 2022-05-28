@@ -32,8 +32,8 @@ function ViewBooking() {
           <thead>
             <tr>
               <th scope="col">Booking ID</th>
-              <th scope="col">Adate</th>
-              <th scope="col">Ddate</th>
+              <th scope="col">Arriva lDate</th>
+              <th scope="col">Departure Date</th>
               <th scope="col">Category</th>
               <th scope="col">Size</th>
             </tr>

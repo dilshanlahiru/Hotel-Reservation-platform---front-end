@@ -31,7 +31,7 @@ function CustomerRegister() {
       <br />
       <br />
       <br />
-      <div className="card col-md-7 offset-md-3 offset-md-3">
+      <div className="card col-md-6 offset-md-3 offset-md-3">
         <div className="card-body">
           <div>
             <h1>Registation</h1>
@@ -46,13 +46,16 @@ function CustomerRegister() {
                   type="text"
                   className="form-control"
                   id="inputEmail3"
-                  placeholder="name"
+                  placeholder="kamal"
                   value={userName}
                   onChange={(e) => setUserName(e.target.value)}
                   required="required"
                   minlength="4"
                   title="please enter at least 4 characters"
                 ></input>
+                <small id="emailHelp" class="form-text text-muted">
+                  please enter at least 4 characters
+                </small>
               </div>
             </div>
             <br />
@@ -60,14 +63,18 @@ function CustomerRegister() {
               <label className="col-sm-2 col-form-label">Mobile Number</label>
               <div className="col-sm-10">
                 <input
-                  type="number"
+                  type="mobile"
                   className="form-control"
-                  placeholder="077123456"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="077xxxxxxx"
+                  minlength="10"
+                  maxlength="10"
+                  title="please enter 10 digit mobile number"
+                  pattern="[0-9]*"
                   value={phoneNo}
                   onChange={(e) => setPhoneNo(e.target.value)}
                   required="required"
-                  minlength="10"
-                  title="please enter valid mobile number"
                 ></input>
               </div>
             </div>
@@ -79,7 +86,7 @@ function CustomerRegister() {
                   type="email"
                   className="form-control"
                   id="inputEmail3"
-                  placeholder="Email"
+                  placeholder="abc@gmail.com"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required="required"
@@ -99,9 +106,13 @@ function CustomerRegister() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required="required"
-                  minlength="4"
-                  title="please enter at least 4 characters"
+                  minlength="5"
+                  maxlength="10"
+                  title="please enter at least 5 characters"
                 ></input>
+                <small id="emailHelp" class="form-text text-muted">
+                  please enter at least 5 characters
+                </small>
               </div>
             </div>
             <br />

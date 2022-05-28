@@ -48,8 +48,8 @@ function Profile() {
           <thead>
             <tr>
               <th scope="col">Booking ID</th>
-              <th scope="col">date</th>
-              <th scope="col">date</th>
+              <th scope="col">Arriva lDate</th>
+              <th scope="col">Departure Date</th>
               <th scope="col">Category</th>
               <th scope="col">Size</th>
               <th scope="col">Actions</th>

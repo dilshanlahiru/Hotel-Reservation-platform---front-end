@@ -82,7 +82,7 @@ function AddRooms() {
                     value={category}
                     required="required"
                   >
-                    <option>Select Category </option>
+                    <option selected>Choose...</option>
                     <option value="normal">normal</option>
                     <option value="luxury">luxury</option>
                   </select>
@@ -102,7 +102,7 @@ function AddRooms() {
                     value={size}
                     required="required"
                   >
-                    <option>Select Size</option>
+                    <option selected>Choose...</option>
                     <option value="2-person">2-person</option>
                     <option value="5-person">5-person</option>
                   </select>
